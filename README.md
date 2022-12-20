@@ -9,6 +9,6 @@
 
 
 > Contributors 
-  1- Mohammed Tahaynah - 1191207
-  2- Baker Al-sdeeq - 119
-  3- Mohammed Al-khateeb - 1192545
+  -1- Mohammed Tahaynah - 1191207
+  -2- Baker Al-sdeeq - 119
+  -3- Mohammed Al-khateeb - 1192545
