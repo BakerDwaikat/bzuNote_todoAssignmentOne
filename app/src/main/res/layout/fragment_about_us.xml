@@ -1,9 +1,108 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:gravity="center"
+    >
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical">
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="152dp"
+
+                android:background="@drawable/shadows"
+                app:srcCompat="@drawable/dgbzulogo" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="221dp"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:background="@drawable/shadows"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text=" About app :
+This app is for the university students to give them a way to save their tasks and schedule them to organize their time.
+  ."
+                android:textColor="@color/colorOrange"
+                android:textSize="22dp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="50dp"
+                android:background="@drawable/shadows"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Contributors  : "
+                    android:textColor="@color/purple_500"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginVertical="10dp"
+
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=" 1191207- mohammed tahayna  "
+                    android:textColor="@color/purple_500"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginVertical="10dp"
+
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=" 1192545- mohammed khateeb   "
+                    android:textColor="@color/purple_500"
+                    android:textSize="22dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_margin="10dp"
+                    android:layout_marginVertical="10dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text=" 1192772- baker alsdeeq   "
+                    android:textColor="@color/purple_500"
+                    android:textSize="22dp" />
+            </LinearLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

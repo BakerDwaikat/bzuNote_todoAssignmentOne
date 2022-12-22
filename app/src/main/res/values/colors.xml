@@ -14,6 +14,12 @@
     <color name="nav_background">#303030</color>
     <color name="nav_header">#414141</color>
     <color name="text_color">#D4D4D4</color>
-    <color name="test">#5E5E5E</color>
+
+    <!--Khateeb colors-->
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorOrange">#ff9800</color>
+    <color name="colorBlack">#000000</color>
 
 </resources>
