@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/loginbgcolor"
+    tools:context=".Auth.LoginActivity">
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="367dp"
+        android:layout_height="760dp"
+        android:layout_marginHorizontal="25dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/corners_design"
+        android:gravity="top|center"
+
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.538"
+        app:layout_constraintStart_toStartOf="parent">
+
+
+<!--        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="282dp"
+            android:layout_height="166dp"
+            android:background="@drawable/shadows"
+            android:elevation="20dp"
+            android:shadowColor="@color/black"
+            android:src="@drawable/bzulogo" />-->
+
+        <!--        <TextView
+            android:id="@+id/stdLoginID"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginBottom="25dp"
+            android:background="@drawable/shadows"
+            android:elevation="10dp"
+            android:fontFamily="sans-serif-smallcaps"
+            android:padding="10dp"
+            android:shadowColor="@color/black"
+            android:text="@string/student_login"
+            android:textColor="#E9008C"
+            android:textSize="35sp"
+            android:textStyle="bold" />-->
+
+<!--        <EditText
+            android:id="@+id/editTextNumber2"
+            android:layout_width="315dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="30dp"
+            android:autofillHints="postalCode"
+            android:drawableStart="@drawable/personlogin30"
+            android:ems="10"
+            android:hint="@string/studentID"
+            android:inputType="number"
+            android:outlineSpotShadowColor="@color/black"
+            android:outlineAmbientShadowColor="@color/black"
+            android:minHeight="48dp" />
+
+        <EditText
+            android:id="@+id/editTextTextPassword"
+            android:layout_width="316dp"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="20dp"
+            android:autofillHints="password"
+            android:drawableStart="@drawable/lock30"
+            android:ems="10"
+            android:hint="@string/passwordTFSTR"
+            android:inputType="textPassword"
+            android:minHeight="48dp" />-->
+
+
+        <ImageView
+            android:id="@+id/imageView5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginVertical="35dp"
+            android:layout_marginHorizontal="10dp"
+            android:contentDescription="@string/bzulogo2TXT"
+            android:background="@drawable/shadows"
+            android:elevation="20dp"
+            android:src="@drawable/bzunotelogo" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/userIDTextInputLayout"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            app:boxBackgroundColor="#EFEBEB"
+            android:textColorHint="#A5A3A3"
+            android:layout_margin="10dp"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/userIDTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="true"
+                android:textColorHint="#EFEBEB"
+                android:drawableStart="@drawable/personlogin30"
+                android:hint="@string/student_idTXT" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/passwordTextInputLayout"
+            android:layout_margin="10dp"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            app:boxBackgroundColor="#EFEBEB"
+
+            android:textColorHint="#A5A3A3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/passwordTextInputEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColorHint="@color/black"
+                android:drawableStart="@drawable/lock30"
+                android:layout_marginTop="15dp"
+
+                android:focusable="true"
+                android:hint="@string/passwordHintTXT" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+
+        <TextView
+            android:id="@+id/forgetpassID"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:gravity="center"
+            android:textColor="#6200EE"
+            android:letterSpacing="0.2"
+            android:backgroundTint="#EFEBEB"
+            android:background="#EFEBEB"
+            android:layout_marginTop="45dp"
+
+            android:text="@string/forget_passwordTXT" />
+
+        <Button
+            android:id="@+id/signInButton"
+            android:layout_width="271dp"
+            android:layout_height="76dp"
+            android:layout_marginTop="30dp"
+            android:backgroundTint="#6200EE"
+            android:elevation="20dp"
+            android:text="@string/sign_inBTnTXT"
+            android:textColor="#FFF"
+            android:shadowColor="@color/black"
+            android:drawableEnd="@drawable/ic_baseline_login_24"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="35dp"
+            android:textSize="15sp"
+            android:textColor="#A5A3A3"
+            android:text="@string/birzeit_university_TXT" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

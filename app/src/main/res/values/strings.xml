@@ -1,3 +1,24 @@
 <resources>
     <string name="app_name">bzutodo</string>
+    <string name="student_login">STUDENT LOGIN</string>
+    <string name="loginimgStr">loginimg</string>
+    <string name="studentID">1191207</string>
+    <string name="passwordTFSTR">password</string>
+    <string name="sign_inBTnTXT">Sign in</string>
+    <string name="forget_passwordTXT"><u>forget Password ?</u></string>
+    <string name="passwordHintTXT">Password</string>
+    <string name="birzeit_university_TXT">© Birzeit university</string>
+    <string name="bzulogo2TXT">bzuLogo2</string>
+    <string name="student_idTXT">student ID</string>
+
+    <!--baker strings-->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="calendar_title">Calendar</string>
+    <string name="today_title">Today</string>
+    <string name="account_title">Account</string>
+    <string name="about_us_title">About us</string>
+    <string name="settings_title">Settings</string>
+    <string name="schedule_title">Schedule</string>
+    <string name="assignments_title">assignments</string>
 </resources>
