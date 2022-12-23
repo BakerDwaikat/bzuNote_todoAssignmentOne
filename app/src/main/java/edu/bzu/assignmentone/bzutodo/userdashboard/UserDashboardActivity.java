@@ -1,5 +1,6 @@
 package edu.bzu.assignmentone.bzutodo.userdashboard;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -14,6 +15,8 @@ import androidx.drawerlayout.widget.DrawerLayout;
 
 import com.google.android.material.navigation.NavigationView;
 
+import edu.bzu.assignmentone.bzutodo.Auth.LoginActivity;
+import edu.bzu.assignmentone.bzutodo.MainActivity;
 import edu.bzu.assignmentone.bzutodo.R;
 
 public class UserDashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -100,7 +103,11 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                         new SettingsFragment()).commit();
                 toolbar.setTitle(R.string.settings_title);
                 break;
-
+            case R.id.nav_signout:
+                Intent closeUserDBA = new Intent(UserDashboardActivity.this, LoginActivity.class);
+                startActivity(closeUserDBA);
+                UserDashboardActivity.this.finish();
+            break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
