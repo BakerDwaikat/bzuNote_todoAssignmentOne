@@ -80,12 +80,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                         new TodayFragment()).commit();
                 toolbar.setTitle(R.string.today_title);
                 break;
-            case R.id.nav_calender:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new CalendarFragment()).commit();
-                toolbar.setTitle(R.string.calendar_title);
-                break;
-            case R.id.nav_assignment:
+            case R.id.nav_assignments:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new AssignmentFragment()).commit();
                 toolbar.setTitle(R.string.assignments_title);
