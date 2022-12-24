@@ -16,12 +16,12 @@
 * its better to use your phone as an emulator better than the built-in AVD
 
 ##> here are "some" Screen Shot of the app UI
-![splash screen](https://mellifluous-heliotrope-85f856.netlify.app/imgs/1.jpg =250x250)
-![login screen](https://mellifluous-heliotrope-85f856.netlify.app/imgs/3.jpg =250x250)
-![today tasks](https://mellifluous-heliotrope-85f856.netlify.app/imgs/4.jpg =250x250)
-![about us](https://mellifluous-heliotrope-85f856.netlify.app/imgs/5.jpg =250x250)
-![settings](https://mellifluous-heliotrope-85f856.netlify.app/imgs/6.jpg =250x250)
-![profile](https://mellifluous-heliotrope-85f856.netlify.app/imgs/7.jpg =250x250)
+    ![splash screen](https://mellifluous-heliotrope-85f856.netlify.app/imgs/1.jpg =250x250)
+    ![login screen](https://mellifluous-heliotrope-85f856.netlify.app/imgs/3.jpg =250x250)
+    ![today tasks](https://mellifluous-heliotrope-85f856.netlify.app/imgs/4.jpg =250x250)
+    ![about us](https://mellifluous-heliotrope-85f856.netlify.app/imgs/5.jpg =250x250)
+    ![settings](https://mellifluous-heliotrope-85f856.netlify.app/imgs/6.jpg =250x250)
+    ![profile](https://mellifluous-heliotrope-85f856.netlify.app/imgs/7.jpg =250x250)
 
 > Contributors & what we worked
   - Mohammed Tahaynah - 1191207:
