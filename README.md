@@ -25,7 +25,6 @@
 
 > Contributors & what we worked
   - Mohammed Tahaynah - 1191207:
-1191207|
 -------------------------------------
   - a.made splash screen animations only & BZUNOTE Logo 
   - b.designed Login page UI & action buttons 
