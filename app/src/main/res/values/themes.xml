@@ -13,4 +13,25 @@
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+
+    <!--khateeb themes-->
+    <style name="nightModeSwitch" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/night_mode</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF </item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
+
+    <style name="notification" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/notification</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF </item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
+
+    <style name="privateAcc" parent="Theme.AppCompat.Light">
+        <item name="colorControlActivated">@color/private_acc</item>
+        <item name="colorSwitchThumbNormal">#FFFFFF </item>
+        <item name="android:colorForeground">#99FFFFFF</item>
+    </style>
+
 </resources>

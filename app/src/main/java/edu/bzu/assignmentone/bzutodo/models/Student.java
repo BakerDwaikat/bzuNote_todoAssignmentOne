@@ -5,11 +5,11 @@ public class Student {
     private int studentID;
     private String studentName;
     private int studentPhone;
-    private short studentAge;
+    private int studentAge;
     private String studentAddress;
     private String studentGender;
 
-    public Student(int studentID, String studentName, int studentPhone, short studentAge, String studentAddress, String studentGender) {
+    public Student(int studentID, String studentName, int studentPhone, int studentAge, String studentAddress, String studentGender) {
         this.studentID = studentID;
         this.studentName = studentName;
         this.studentPhone = studentPhone;
@@ -42,11 +42,11 @@ public class Student {
         this.studentPhone = studentPhone;
     }
 
-    public short getStudentAge() {
+    public int getStudentAge() {
         return studentAge;
     }
 
-    public void setStudentAge(short studentAge) {
+    public void setStudentAge(int studentAge) {
         this.studentAge = studentAge;
     }
 

@@ -20,5 +20,8 @@
     <string name="about_us_title">About us</string>
     <string name="settings_title">Settings</string>
     <string name="schedule_title">Schedule</string>
-    <string name="assignments_title">assignments</string>
+    <string name="inbox_title">Inbox</string>
+
+    <!--KHATEEB STRINGS -->
+    <string name="secrity_privcy"><![CDATA[secrity & privcy]]></string>
 </resources>
