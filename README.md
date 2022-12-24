@@ -9,10 +9,10 @@
     -  find old tasks and finish them
     
     => for this demo to bypass the login page please use one of the following username & password
-            1.username: #f03c15 1191207| Password : 12345 OR
-            2.username: #f03c15 1192545| Password : 56789 OR
-            3.username: #f03c15 1192772| Password : 98765 OR
-            4.username: #f03c15 1234| Password : 12345 
+            1.username:  1191207| Password : 12345 OR
+            2.username:  1192545| Password : 56789 OR
+            3.username:  1192772| Password : 98765 OR
+            4.username:  1234| Password : 12345 
 * its better to use your phone as an emulator better than the built-in AVD
 
 ##> here are "some" Screen Shot of the app UI
@@ -56,7 +56,7 @@
 
 ############[DONT FORGET !]################
     => for this demo to bypass the login page please use one of the following username & password
-            1.username: #f03c15 1191207| Password : 12345 OR
-            2.username: #f03c15 1192545| Password : 56789 OR
-            3.username: #f03c15 1192772| Password : 98765 OR
-            4.username: #f03c15 1234| Password : 12345 
+            1.username:1191207| Password : 12345 OR
+            2.username:  1192545| Password : 56789 OR
+            3.username:  1192772| Password : 98765 OR
+            4.username:  1234| Password : 12345 
