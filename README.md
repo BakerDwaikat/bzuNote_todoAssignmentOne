@@ -27,14 +27,14 @@
   - Mohammed Tahaynah - 1191207:
 1191207|
 -------------------------------------
-  a.made splash screen animations only & BZUNOTE Logo
-        b.designed Login page UI & action buttons
-        c.created webView page
-        d.created recyclerViews & recyclerViewAdapter & recyclerView Manager
-        e.Managment of the lifescycle events in activities
-        f.validation events & login validation
-        g.inbox UI
-        h.created StudentModel & Authentication
+  - a.made splash screen animations only & BZUNOTE Logo 
+  - b.designed Login page UI & action buttons 
+  - c.created webView page 
+  - d.created recyclerViews & recyclerViewAdapter & recyclerView Manager 
+  - e.Managment of the lifescycle events in activities 
+  - f.validation events & login validation 
+  - g.inbox UI 
+  - h.created StudentModel & Authentication
 
     - Baker Al-sdeeq - 1192772:
         a. fragments & fragments management system 
