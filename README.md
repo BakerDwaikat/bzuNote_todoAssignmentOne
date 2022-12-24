@@ -36,6 +36,7 @@
   - h.created StudentModel & Authentication
 
     - Baker Al-sdeeq - 1192772:
+  ----------------------------------------
         a. fragments & fragments management system 
         b. framgments menu & supportGragmentManager Transition (humburger menu) 
         c. Account Page
@@ -44,6 +45,7 @@
         f. imported dummy data for tasks to be used for recyclerView later
     
   - Mohammed Al-khateeb - 1192545:
+----------------------------------
         a. spalsh screen UI only 
         b. settings fragment UI 
         c. About US page UI
