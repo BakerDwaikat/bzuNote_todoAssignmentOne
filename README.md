@@ -16,12 +16,14 @@
 * its better to use your phone as an emulator better than the built-in AVD
 
 ##> here are "some" Screen Shot of the app UI
-    ![splash screen](https://mellifluous-heliotrope-85f856.netlify.app/imgs/1.jpg =250x250)
-    ![login screen](https://mellifluous-heliotrope-85f856.netlify.app/imgs/3.jpg =250x250)
-    ![today tasks](https://mellifluous-heliotrope-85f856.netlify.app/imgs/4.jpg =250x250)
-    ![about us](https://mellifluous-heliotrope-85f856.netlify.app/imgs/5.jpg =250x250)
-    ![settings](https://mellifluous-heliotrope-85f856.netlify.app/imgs/6.jpg =250x250)
-    ![profile](https://mellifluous-heliotrope-85f856.netlify.app/imgs/7.jpg =250x250)
+
+- ![splash screen](https://mellifluous-heliotrope-85f856.netlify.app/imgs/1.jpg =250x250)
+- ![login screen](https://mellifluous-heliotrope-85f856.netlify.app/imgs/3.jpg =250x250)
+- ![today tasks](https://mellifluous-heliotrope-85f856.netlify.app/imgs/4.jpg =250x250)
+- ![about us](https://mellifluous-heliotrope-85f856.netlify.app/imgs/5.jpg =250x250)
+- ![settings](https://mellifluous-heliotrope-85f856.netlify.app/imgs/6.jpg =250x250)
+-  ![profile](https://mellifluous-heliotrope-85f856.netlify.app/imgs/7.jpg =250x250)
+
 
 > Contributors & what we worked
   - Mohammed Tahaynah - 1191207:
@@ -50,3 +52,11 @@
         b. settings fragment UI 
         c. About US page UI
         e. Setup webview URL Links for scheduling
+
+
+############[DONT FORGET !]################
+    => for this demo to bypass the login page please use one of the following username & password
+            1.username: #f03c15 1191207| Password : 12345 OR
+            2.username: #f03c15 1192545| Password : 56789 OR
+            3.username: #f03c15 1192772| Password : 98765 OR
+            4.username: #f03c15 1234| Password : 12345 
