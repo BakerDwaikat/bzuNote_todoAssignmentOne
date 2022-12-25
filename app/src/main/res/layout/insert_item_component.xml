@@ -3,15 +3,16 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:orientation="vertical"
-    android:background="#4D4D4D"
-    android:layout_height="match_parent">
+    android:background="@drawable/shadows"
+    android:backgroundTint="#363636"
+    android:layout_height="wrap_content">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="10dp"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:paddingHorizontal="10dp"
         android:background="@drawable/shadows"
         android:backgroundTint="#363636"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -27,7 +28,7 @@
             android:textColor="#FFFFFF"
             android:textColorHint="#BBB5B5"
             android:textSize="22sp"
-            android:backgroundTint="#E95042"
+            android:backgroundTint="#4CAF50"
             android:textStyle="bold" />
 
         <EditText
@@ -37,16 +38,17 @@
             android:hint="Description"
             android:textColor="#FFFFFF"
             android:textColorHint="#A6A6A6"
-            android:backgroundTint="#E95042"
+            android:backgroundTint="#4CAF50"
             android:textStyle="bold"
             />
 
             <TextView
+                android:id="@+id/today_dateTimeID"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Today"
+                android:text="@string/todayString"
                 android:textColor="#25B84C"
-                android:layout_margin="15dp"
+                android:layout_marginVertical="10dp"
                 android:textSize="16sp"
                 android:textStyle="bold"
                 android:paddingHorizontal="15dp"

@@ -22,6 +22,8 @@
     <string name="schedule_title">Schedule</string>
     <string name="inbox_title">Inbox</string>
 
+
     <!--KHATEEB STRINGS -->
     <string name="secrity_privcy"><![CDATA[secrity & privcy]]></string>
+    <string name="todayString">Today</string>
 </resources>

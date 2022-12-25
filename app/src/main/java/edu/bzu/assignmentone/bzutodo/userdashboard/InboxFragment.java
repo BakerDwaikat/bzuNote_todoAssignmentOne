@@ -6,19 +6,25 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.WindowManager;
 import android.widget.CalendarView;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
+import androidx.appcompat.content.res.AppCompatResources;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import edu.bzu.assignmentone.bzutodo.Controllers.Tasks_RecycleViewAdapter;
 import edu.bzu.assignmentone.bzutodo.R;
@@ -31,6 +37,8 @@ public class InboxFragment extends Fragment {
     private RecyclerView byDateRecyclerView;
     private Tasks_RecycleViewAdapter adapter;
     private CalendarView calendarView;
+    private Calendar calender;
+
 
     @Nullable
     @Override
@@ -46,6 +54,8 @@ public class InboxFragment extends Fragment {
         addNewTask = view.findViewById(R.id.addNewTaskBtn);
          calendarView = view.findViewById(R.id.calendarView);
         byDateRecyclerView = view.findViewById(R.id.byDateRecyclerView);
+
+        calender = Calendar.getInstance();
 
         iniateDataSource( );
 
@@ -75,29 +85,45 @@ public class InboxFragment extends Fragment {
         View addTaskView = inflater.inflate(R.layout.insert_item_component,null);
         EditText newTaskName = addTaskView.findViewById(R.id.newTaskNameID);
         EditText newTaskDesc = addTaskView.findViewById(R.id.newTaskDescID);
+        TextView todayTimeTV = addTaskView.findViewById(R.id.today_dateTimeID);
+        String currentDate = time(0);
+        String currentTime = time(1);
 
+        todayTimeTV.setText("Today @ "+ currentTime);
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
         alertDialog.setView(addTaskView);
-
         alertDialog.setPositiveButton("Add Task", (dialog, id) -> {
 
             String newTitle = newTaskName.getText().toString();
             String newDesc = newTaskDesc.getText().toString();
-            dummyTaskModel.add(new TaskModel(newTitle,newDesc,"8:06PM"));
-            System.out.println(calendarView.getDate());
+            dummyTaskModel.add(new TaskModel(newTitle,newDesc,"" + currentDate));
             adapter.notifyItemChanged(dummyTaskModel.size() - 1);
             Toast.makeText(getContext(), "Task Added !", Toast.LENGTH_SHORT).show();
 
             dialog.dismiss();
+
         }).setNegativeButton("Cancel", (dialog, id) -> {
 
             Toast.makeText(getContext(), "Cancel", Toast.LENGTH_SHORT).show();
             dialog.dismiss();
 
         });
-
         alertDialog.create();
-        alertDialog.show();
+        alertDialog.show().getWindow().setBackgroundDrawable(AppCompatResources.getDrawable(getContext(),R.drawable.shadow2));
 
+    }
+
+    private String time (int format) {
+
+        String s ="";
+        switch (format) {
+            case 0:
+                s = DateFormat.getDateInstance(DateFormat.FULL).format(calender.getTime());
+                break;
+            case 1:
+                s = SimpleDateFormat.getTimeInstance().format(calender.getTime());
+                break;
+        }
+        return s;
     }
 }
