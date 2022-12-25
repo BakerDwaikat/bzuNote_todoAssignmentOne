@@ -1,10 +1,13 @@
 package edu.bzu.assignmentone.bzutodo.userdashboard;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.CalendarView;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,6 +28,9 @@ public class InboxFragment extends Fragment {
 
     private ArrayList<TaskModel> dummyTaskModel ;
     private FloatingActionButton addNewTask ;
+    private RecyclerView byDateRecyclerView;
+    private Tasks_RecycleViewAdapter adapter;
+    private CalendarView calendarView;
 
     @Nullable
     @Override
@@ -38,20 +44,18 @@ public class InboxFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         addNewTask = view.findViewById(R.id.addNewTaskBtn);
-        CalendarView calendarView = view.findViewById(R.id.calendarView);
-        RecyclerView byDateRecyclerView = view.findViewById(R.id.byDateRecyclerView);
+         calendarView = view.findViewById(R.id.calendarView);
+        byDateRecyclerView = view.findViewById(R.id.byDateRecyclerView);
 
         iniateDataSource( );
 
-        Tasks_RecycleViewAdapter adapter = new Tasks_RecycleViewAdapter(view.getContext(),dummyTaskModel);
+         adapter = new Tasks_RecycleViewAdapter(view.getContext(),dummyTaskModel);
         byDateRecyclerView.setAdapter(adapter);
         byDateRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-        calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
-            @Override
-            public void onSelectedDayChange(@NonNull CalendarView calendarView, int year, int month, int day) {
-                Toast.makeText(getContext(), "" + day, Toast.LENGTH_SHORT).show();
-            }
-        });
+        calendarView.setOnDateChangeListener((calendarView, year, month, day) -> Toast.makeText(getContext(), "" + day, Toast.LENGTH_SHORT).show());
+
+        addNewTask.setOnClickListener( e -> addNewTask ());
+
     }
     private void iniateDataSource( ) {
 
@@ -62,6 +66,38 @@ public class InboxFragment extends Fragment {
         dummyTaskModel.add(new TaskModel("Android Development midterm exam","10/1/2023 at  Shaheen162","15:50 PM"));
         dummyTaskModel.add(new TaskModel("Software engineer Assignment 2","10/1/2023 at  Shaheen162","15:50 PM"));
         dummyTaskModel.add(new TaskModel("GAME DEVELOPMENT exam ","chap 2,3,4","15:50 PM"));
+
+    }
+
+    private void addNewTask ()  {
+
+        LayoutInflater inflater = LayoutInflater.from(getContext());
+        View addTaskView = inflater.inflate(R.layout.insert_item_component,null);
+        EditText newTaskName = addTaskView.findViewById(R.id.newTaskNameID);
+        EditText newTaskDesc = addTaskView.findViewById(R.id.newTaskDescID);
+
+        AlertDialog.Builder alertDialog = new AlertDialog.Builder(getContext());
+        alertDialog.setView(addTaskView);
+
+        alertDialog.setPositiveButton("Add Task", (dialog, id) -> {
+
+            String newTitle = newTaskName.getText().toString();
+            String newDesc = newTaskDesc.getText().toString();
+            dummyTaskModel.add(new TaskModel(newTitle,newDesc,"8:06PM"));
+            System.out.println(calendarView.getDate());
+            adapter.notifyItemChanged(dummyTaskModel.size() - 1);
+            Toast.makeText(getContext(), "Task Added !", Toast.LENGTH_SHORT).show();
+
+            dialog.dismiss();
+        }).setNegativeButton("Cancel", (dialog, id) -> {
+
+            Toast.makeText(getContext(), "Cancel", Toast.LENGTH_SHORT).show();
+            dialog.dismiss();
+
+        });
+
+        alertDialog.create();
+        alertDialog.show();
 
     }
 }

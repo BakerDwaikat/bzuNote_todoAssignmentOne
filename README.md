@@ -54,7 +54,7 @@
         e. Setup webview URL Links for scheduling
 
 
-############[DONT FORGET !]################
+############[DONT FORGET!]################
     => for this demo to bypass the login page please use one of the following username & password
             1.username:1191207| Password : 12345 OR
             2.username:  1192545| Password : 56789 OR
