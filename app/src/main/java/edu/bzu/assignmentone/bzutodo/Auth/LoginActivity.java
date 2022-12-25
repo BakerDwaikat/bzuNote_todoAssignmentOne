@@ -63,8 +63,6 @@ public class LoginActivity extends AppCompatActivity {
         }else
             Toast.makeText(this, "Please Fill the Blanks", Toast.LENGTH_SHORT).show();
 
-
-
     }
 
 }

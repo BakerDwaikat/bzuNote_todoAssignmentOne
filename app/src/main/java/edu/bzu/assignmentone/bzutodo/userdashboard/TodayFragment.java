@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -34,7 +35,14 @@ public class TodayFragment extends Fragment {
         Tasks_RecycleViewAdapter adapter = new Tasks_RecycleViewAdapter(view.getContext(),todayTasks);
         todayTasksView.setAdapter(adapter);
         todayTasksView.setLayoutManager(new LinearLayoutManager(view.getContext()));
-
+        adapter.setOnItemClickListener(new Tasks_RecycleViewAdapter.IOnItemClickListener() {
+            @Override
+            public void onItemClick(int pos) {
+                todayTasks.remove(pos);
+                adapter.notifyItemRemoved(pos);
+                Toast.makeText(getContext(),"Task Completed",Toast.LENGTH_SHORT).show();
+            }
+        });
     }
 
     private void iniateDataSource( ) {

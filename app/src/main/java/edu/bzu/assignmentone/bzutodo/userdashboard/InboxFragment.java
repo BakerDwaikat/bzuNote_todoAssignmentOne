@@ -52,7 +52,7 @@ public class InboxFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         addNewTask = view.findViewById(R.id.addNewTaskBtn);
-         calendarView = view.findViewById(R.id.calendarView);
+        calendarView = view.findViewById(R.id.calendarView);
         byDateRecyclerView = view.findViewById(R.id.byDateRecyclerView);
 
         calender = Calendar.getInstance();
@@ -62,6 +62,14 @@ public class InboxFragment extends Fragment {
          adapter = new Tasks_RecycleViewAdapter(view.getContext(),dummyTaskModel);
         byDateRecyclerView.setAdapter(adapter);
         byDateRecyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        adapter.setOnItemClickListener(new Tasks_RecycleViewAdapter.IOnItemClickListener() {
+            @Override
+            public void onItemClick(int pos) {
+                dummyTaskModel.remove(pos);
+                adapter.notifyItemRemoved(pos);
+                Toast.makeText(getContext(),"Task Completed",Toast.LENGTH_SHORT).show();
+            }
+        });
         calendarView.setOnDateChangeListener((calendarView, year, month, day) -> Toast.makeText(getContext(), "" + day, Toast.LENGTH_SHORT).show());
 
         addNewTask.setOnClickListener( e -> addNewTask ());
@@ -110,6 +118,12 @@ public class InboxFragment extends Fragment {
         });
         alertDialog.create();
         alertDialog.show().getWindow().setBackgroundDrawable(AppCompatResources.getDrawable(getContext(),R.drawable.shadow2));
+
+    }
+
+    private void removeCompletedTask () {
+
+
 
     }
 

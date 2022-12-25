@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
@@ -18,6 +19,16 @@ public class Tasks_RecycleViewAdapter extends RecyclerView.Adapter<Tasks_Recycle
 
     private Context context;
     private ArrayList<TaskModel> dummyTaskModels ;
+    private IOnItemClickListener itemClickListener;
+
+    public interface IOnItemClickListener {
+        void onItemClick(int pos);
+    }
+
+    public void setOnItemClickListener(IOnItemClickListener clickListener) {
+        this.itemClickListener = clickListener;
+
+    }
 
     public Tasks_RecycleViewAdapter(Context context, ArrayList<TaskModel> dummyTaskModels) {
         this.context = context;
@@ -31,7 +42,7 @@ public class Tasks_RecycleViewAdapter extends RecyclerView.Adapter<Tasks_Recycle
         LayoutInflater inflater = LayoutInflater.from(context);
         View view = inflater.inflate(R.layout.task_item_design,parent,false);
 
-        return new Tasks_RecycleViewAdapter.TaskViewHolder(view);
+        return new Tasks_RecycleViewAdapter.TaskViewHolder(view,itemClickListener);
     }
 
     @Override
@@ -51,15 +62,24 @@ public class Tasks_RecycleViewAdapter extends RecyclerView.Adapter<Tasks_Recycle
     static class TaskViewHolder extends RecyclerView.ViewHolder {
 
         private TextView taskTitleView , soleganDescriptionView , dateView ;
+        private CheckBox doneTaskBox;
 
 
-        public TaskViewHolder(@NonNull View itemView) {
+        public TaskViewHolder(@NonNull View itemView,IOnItemClickListener itemClickListener) {
             super(itemView);
 
             taskTitleView = itemView.findViewById(R.id.taskTitleID);
             soleganDescriptionView = itemView.findViewById(R.id.soleganTitleID);
             dateView = itemView.findViewById(R.id.dateTitleID);
+            doneTaskBox = itemView.findViewById(R.id.doneTaskBoxID);
+            doneTaskBox.setChecked(false);
 
+            doneTaskBox.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    itemClickListener.onItemClick(getAdapterPosition());
+                }
+            });
 
         }
     }
