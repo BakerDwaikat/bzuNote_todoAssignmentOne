@@ -21,9 +21,9 @@ import edu.bzu.assignmentone.bzutodo.models.Student;
 
 public class UserDashboardActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
-     final Student[] students = {new Student(1191207,"Mohammed Tahayna",592130148,21,"Palestine Ramallah","male"),
-            new Student(1192545,"Mohammed Khateeb",593052136,21,"Ramallah bel'een","male"),
-            new Student(1192772,"Baker Alsdeeq",595959595,21,"Ramallah Almasyoun","male")};
+    final Student[] students = {new Student(1191207, "Mohammed Tahayna", 592130148, 21, "Palestine Ramallah", "male"),
+            new Student(1192545, "Mohammed Khateeb", 593052136, 21, "Ramallah bel'een", "male"),
+            new Student(1192772, "Baker Alsdeeq", 595959595, 21, "Ramallah Almasyoun", "male")};
 
 
     private DrawerLayout drawer;
@@ -83,7 +83,7 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()){
+        switch (item.getItemId()) {
             case R.id.nav_today:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new TodayFragment()).commit();
@@ -109,16 +109,25 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                         new SettingsFragment()).commit();
                 toolbar.setTitle(R.string.settings_title);
                 break;
+            case R.id.nav_weather:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new weatherFragment()).commit();
+                toolbar.setTitle(R.string.weather_title);
+                break;
+            case R.id.nav_uni_map:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new mapFragment()).commit();
+                toolbar.setTitle(R.string.map_title);
+                break;
             case R.id.nav_signout:
                 Intent closeUserDBA = new Intent(UserDashboardActivity.this, LoginActivity.class);
                 startActivity(closeUserDBA);
                 UserDashboardActivity.this.finish();
-            break;
+                break;
         }
         drawer.closeDrawer(GravityCompat.START);
         return true;
     }
-
 
 
 }

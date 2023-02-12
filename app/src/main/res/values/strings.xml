@@ -21,6 +21,8 @@
     <string name="settings_title">Settings</string>
     <string name="schedule_title">Schedule</string>
     <string name="inbox_title">Inbox</string>
+    <string name="weather_title">Weather</string>
+    <string name="map_title">University Title</string>
 
 
     <!--KHATEEB STRINGS -->
