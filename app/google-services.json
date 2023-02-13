@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "316995127147",
+    "project_id": "bzutodo",
+    "storage_bucket": "bzutodo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:316995127147:android:d861f440bb3d90327e2e2e",
+        "android_client_info": {
+          "package_name": "edu.bzu.assignmentone.bzutodo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "316995127147-vptt94m3dl5407uqhfp74p3odqtao9rn.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCR6tj172JC_I7F_Ey7T9jVHYEAoLBe3Lk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "316995127147-vptt94m3dl5407uqhfp74p3odqtao9rn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
