@@ -40,6 +40,8 @@ public class weatherFragment extends Fragment {
     TextView temperature, description,minTemp,maxTemp,Humidity, feelslike;
     ImageView weatherIcon;
 
+    String photoURL;
+
     private final String url = "http://api.openweathermap.org/data/2.5/weather";
     private final String code = "cda8ea9523bfbcbc0d04f3193e59aeef";
 
@@ -75,12 +77,12 @@ public class weatherFragment extends Fragment {
                     int humidity = mainObj.getInt("humidity");
                     String icon = secondObj.getJSONObject(0).getString("icon");
                     String cond = secondObj.getJSONObject(0).getString("description");
-                    String imageURL = "http://openweathermap.org/img/wn/" + icon + ".png";
+                    photoURL = "http://openweathermap.org/img/wn/" + icon + ".png";
                     String tempFinal = df.format(temp) + "\u00B0";
                     String minFinal = df.format(mintemp) + "\u00B0";
                     String maxFinal = df.format(maxtemp) + "\u00B0";
                     String feelsFinal = df.format(feelsTemp) + "\u00B0";
-                    updateUI(tempFinal,imageURL,cond,""  + humidity,minFinal,maxFinal,feelsFinal);
+                    updateUI(tempFinal,photoURL,cond,""  + humidity,minFinal,maxFinal,feelsFinal);
                 } catch (JSONException e) {
                     Log.e("error",e.getMessage());
                     e.printStackTrace();
@@ -104,4 +106,7 @@ public class weatherFragment extends Fragment {
         feelslike.setText(FeelsLike);
         Glide.with(getView()).load(photoURL).into(weatherIcon);
     }
+
+
+
 }
