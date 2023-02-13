@@ -37,7 +37,7 @@ import edu.bzu.assignmentone.bzutodo.R;
 public class weatherFragment extends Fragment {
 
     private DecimalFormat df = new DecimalFormat("#.#");
-    TextView temperature;
+    TextView temperature, description,minTemp,maxTemp,Humidity, feelslike;
     ImageView weatherIcon;
 
     private final String url = "http://api.openweathermap.org/data/2.5/weather";
@@ -52,7 +52,12 @@ public class weatherFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         temperature = view.findViewById(R.id.temperature);
+        description = view.findViewById(R.id.description);
         weatherIcon = view.findViewById(R.id.weather_icon);
+        Humidity = view.findViewById(R.id.Humidity);
+        minTemp = view.findViewById(R.id.min_temp);
+        maxTemp = view.findViewById(R.id.max_temp);
+        feelslike = view.findViewById(R.id.feels_like);
         String str = url + "?q=Ramallah&appid=" + code;
         RequestQueue queue = Volley.newRequestQueue(this.getContext());
         StringRequest stringRequest = new StringRequest(Request.Method.GET, str, new Response.Listener<String>() {
@@ -65,11 +70,17 @@ public class weatherFragment extends Fragment {
                     JSONArray secondObj = jsonObject.getJSONArray("weather");
                     double temp = mainObj.getDouble("temp") - 273.15;
                     double feelsTemp = mainObj.getDouble("feels_like") - 273.15;
+                    double mintemp = mainObj.getDouble("temp_min") - 273.15;
+                    double maxtemp = mainObj.getDouble("temp_max") - 273.15;
                     int humidity = mainObj.getInt("humidity");
                     String icon = secondObj.getJSONObject(0).getString("icon");
+                    String cond = secondObj.getJSONObject(0).getString("description");
                     String imageURL = "http://openweathermap.org/img/wn/" + icon + ".png";
-                    String finalResult = df.format(temp) + "\u00B0";
-                    updateUI(finalResult,imageURL);
+                    String tempFinal = df.format(temp) + "\u00B0";
+                    String minFinal = df.format(mintemp) + "\u00B0";
+                    String maxFinal = df.format(maxtemp) + "\u00B0";
+                    String feelsFinal = df.format(feelsTemp) + "\u00B0";
+                    updateUI(tempFinal,imageURL,cond,""  + humidity,minFinal,maxFinal,feelsFinal);
                 } catch (JSONException e) {
                     Log.e("error",e.getMessage());
                     e.printStackTrace();
@@ -84,8 +95,13 @@ public class weatherFragment extends Fragment {
         queue.add(stringRequest);
     }
 
-    public void updateUI(String temp,String photoURL){
+    public void updateUI(String temp,String photoURL,String cond,String humidity, String mintemp, String maxtemp, String FeelsLike){
         temperature.setText(temp);
+        description.setText(cond);
+        Humidity.setText(humidity);
+        minTemp.setText(mintemp);
+        maxTemp.setText(maxtemp);
+        feelslike.setText(FeelsLike);
         Glide.with(getView()).load(photoURL).into(weatherIcon);
     }
 }

@@ -35,4 +35,13 @@ public class TaskModel {
     public void setCompleteTaskDate(String completeTaskDate) {
         this.completeTaskDate = completeTaskDate;
     }
+
+    @Override
+    public String toString() {
+        return "TaskModel{" +
+                "taskTitle='" + taskTitle + '\'' +
+                ", soleganText='" + soleganText + '\'' +
+                ", completeTaskDate='" + completeTaskDate + '\'' +
+                '}';
+    }
 }
