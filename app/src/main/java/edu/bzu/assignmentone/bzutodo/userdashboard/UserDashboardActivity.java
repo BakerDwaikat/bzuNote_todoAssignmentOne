@@ -99,20 +99,23 @@ public class UserDashboardActivity extends AppCompatActivity implements Navigati
                         new ScheduleFragment()).commit();
                 toolbar.setTitle(R.string.schedule_title);
                 break;
+
             case R.id.nav_about_us:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new AboutUsFragment()).commit();
                 toolbar.setTitle(R.string.about_us_title);
                 break;
-            case R.id.nav_settings:
-                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
-                        new SettingsFragment()).commit();
-                toolbar.setTitle(R.string.settings_title);
-                break;
+
             case R.id.nav_weather:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                         new weatherFragment()).commit();
                 toolbar.setTitle(R.string.weather_title);
+                break;
+
+            case R.id.nav_settings:
+                getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                        new SettingsFragment()).commit();
+                toolbar.setTitle(R.string.settings_title);
                 break;
             case R.id.nav_uni_map:
                 getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
